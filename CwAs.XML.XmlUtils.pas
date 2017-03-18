@@ -2,6 +2,7 @@
 unit CwAs.Xml.XmlUtils;
 
 interface
+// KOmmentar
 
 uses SysUtils,  Xml.XMLIntf;
 
@@ -45,8 +46,8 @@ end;
 class function TXMLUtil.DateTimeToXML(aDateTime: TDateTime): string;
 begin
 {
-  Kan opgså gjøre det slik, men da legges tidsforskjell/tidssone til bakerst i strengen. Siden vi ikke vet helt hvordan
-  vi skal takle dette, og vi ikke gidder å tenke på det akkurat nå, lar vi opprinnelig kode være som før.
+  Kan opgsÃ¥ gjÃ¸re det slik, men da legges tidsforskjell/tidssone til bakerst i strengen. Siden vi ikke vet helt hvordan
+  vi skal takle dette, og vi ikke gidder Ã¥ tenke pÃ¥ det akkurat nÃ¥, lar vi opprinnelig kode vÃ¦re som fÃ¸r.
   function DateTimeToXML(aDateTime: TDateTime): string;
   var
     vXSDateTime: TXSDateTime;
@@ -81,7 +82,7 @@ var
   vNode: IXMLNode;
 begin
   aResultNode := nil;
-  // Ikke casesensitive søk etter childe nodes
+  // Ikke casesensitive sÃ¸k etter childe nodes
   for I := 0 to aNode.ChildNodes.Count - 1 do
   begin
     vNode := aNode.ChildNodes.Get(I);
@@ -161,7 +162,7 @@ end;
 class function TXMLUtil.XMLToDateTime(aStringDate: String): TDateTime;
 begin
 {
-  Kan også gjøre det slik, emn kutter det ut pga problemstillinger rundt lagring av tidssone (se DateTimeToXML)
+  Kan ogsÃ¥ gjÃ¸re det slik, emn kutter det ut pga problemstillinger rundt lagring av tidssone (se DateTimeToXML)
 
   function XMLToDateTime(aStringDate: String): TDateTime;
   var
